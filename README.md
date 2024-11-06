@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Gheorghe Marius Razvan 324CA
 
 Problema1 ----Servere----
@@ -73,6 +73,4 @@ cele mai scumpe 2 din 3 si voi compara.
 Deci costul va fi minimul pe care il calculez in ficare structura de decizie.
 Complexitatea algoritmului va fi O(n) deoarece voi parcurge toate elementele
 vectorului si voi faca doar verificari O(1) in interiorul parcurgerii.
-=======
-# PA_project1
->>>>>>> d60b940acc8ab8663a87e170a2bd2f9fc968bbb7
+
