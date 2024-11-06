@@ -1,76 +1,76 @@
 
 Gheorghe Marius Razvan 324CA
 
-Problema1 ----Servere----
-Pentru rezolvarea acestei probleme citesc cei 2 vectori puterile
-si pragurile de alimentare.
-Ca sa gasesc valoarea puterii de alimentare am ales sa apelez la grafic
-facand diferenta dintre vectorii p si c si suma dintre ei pentru
-a reduce intervalul de cautare pe grafic pentru a lua valori pozitive.
-Am facut maximul pentru diferentele dintre c-p,cel mai din stanga maxim
-si minimul dintre c+p, cel mai din dreapta minim iar apoi am facut media 
-aritmetica dintre cele 2 unde am observat ca se gaseste curentul optim de
-alimentare sau mai bine zis puterea.
-Complexitatea este O(n) deoarece trec linear prin vectorii c si p.
+Problem 1 ----Servers----
+To solve this problem, read the 2 power vectors
+and power thresholds.
+In order to find the value of the power supply, I chose to refer to the graph
+making the difference between the vectors p and c and their sum for
+to reduce the search interval on the graph to take positive values.
+I did the maximum for the differences between c-p, the maximum on the left
+and the minimum between c+p, the rightmost minimum and then I did the average 
+the arithmetic between the 2 where we noticed that the optimal current is found
+power supply or rather power.
+The complexity is O(n) because they pass linearly through the vectors c and p.
 
-Problema 2 ----Colorare----
-Pentru rezolvarea acestei probleme voi citi numarul de perechi iar pe acestea
-le stochez intr un vector de pereche cu nr si tipul de numere(H sau V),
-functiile vor fi de tipul long long pentru ca vom lucra cu valori destul de
-mari de aceea suntem nevoiti sa si folosim %MOD. Functia "powmod" o 
-folosesc pentru ridicarea la putere in timp logaritmic cu complexitatea de 
-O(N*logn).In "get_result vom verifica inceputul lantului de dreptunghiuri,
-daca incepe cu H vom avea 6 combinari pentru primele 2 dreptunghiuri suprapuse
-iar celelalte in format H vor ramane 3^(n-1) combinari de culori.Daca incepe
-cu V primul dreptunghi va avea 6 posibilitati de colorare iar urmatoarele
-vor avea 2^(n-1) combinari, apoi dupa ce am citit o pereche vom verifica 
-perechea urmatoare cu cea precedenta pentru a vedea cum luam combinatiile.
-Daca tipurile au ramas ca cele trecute pentru V lasam 2^(n) iar pentru H 3^(n),
-iar daca se schimba tipul dintre perechea prezenta si cea precedenta pentru
-V va fi 2^(n-1) deoarece primul V dupa H va veni 1 iar daca este H va veni
-2*3^(n-1).Complexitatea algoritmului este O(n) deoarece parcurg o singura
-data vectorul de perechi.
+Problem 2 ----Coloring----
+To solve this problem, I will read the number of pairs again
+I store them in a pair vector with number and type of numbers (H or V),
+the functions will be of the long long type because we will work with quite a few values
+large, that's why we have to use %MOD. The "powmod" function o 
+I use for increasing the power in logarithmic time with the complexity of 
+O(N*logn). In "get_result we will check the beginning of the chain of rectangles,
+if it starts with H we will have 6 combinations for the first 2 overlapped rectangles
+and the others in H format will remain 3^(n-1) color combinations. If it starts
+with V the first rectangle will have 6 coloring possibilities and the following ones
+they will have 2^(n-1) combinations, then after reading a pair we will check 
+the next pair with the previous one to see how we get the combinations.
+If the types remained as the previous ones, for V we leave 2^(n) and for H 3^(n),
+and if the type changes between the present pair and the previous one for
+V will be 2^(n-1) because the first V after H will come 1 and if it is H it will come
+2*3^(n-1). The complexity of the algorithm is O(n) because they go through only one
+given the vector of pairs.
 
-Problema 3 ----Compresie----
-Pentru rezolvarea acestei probleme citesc cei 2 vectori primiti la intrare,
-Parcurg primul vector si voi face sumele partiale pentru acesta stocandu-le,
-pe fiecare intr un tablou.Apoi parcurg al 2 lea vector si tin intr o variabila
-suma partiala temporara si voi verifica daca se afla in tabloul format la 
-parcurgerea primului vector, aceasta cautare o voi face cu o cautare binara,
-pentru care am creat functia binary_search.
-Ca si complexitate algoritmul parcurge linear ambii vectori deci va fi
-complexitate in O(N).
+Problem 3 ----Compression----
+To solve this problem, I read the 2 vectors received at the input,
+I go through the first vector and I will do the partial sums for it by storing them,
+each one in a table. Then I go through the 2nd vector and keep it in a variable
+temporary partial amount and I will check if it is in the table formed at 
+traversing the first vector, I will do this search with a binary search,
+for which I created the binary_search function.
+In terms of complexity, the algorithm runs through both vectors linearly, so it will be
+complexity in O(N).
 
-Problema 4 ----Criptat----
-Pentru rezolvarea acestei probleme voi folosi ceva asemanator cu problema
-rucsacului atunci cand trebuie sa gasesc lungimea maxima a parolei,parcurgand
-descrescator pentru a nu socoti de mai multe ori un cuvant precedent.
-Voi citi toate cuvintele intr un vector words,voi face frecventa
-pentru fiecare litera din fiecare cuvant si le voi stoca intr un map
-de N ori pentru fiecare cuvant.
-Apoi parcurg fiecare litera posibila si iau toata combinatiile de parola
-de lungime maxima pentru litera respectiva, acest lucru facandu l astfel:
-iau un vector dp de lungimea maxima a parolei 10001,se trece prin toate
-cuvintele la litera respectiva se ia lungimea si frecventa literei in acel
-cuvant,se parcurge de la final vectorul pentru a nu adauga o lungime de mai
-multe ori apoi verific daca se indeplineste conditia de maxim,adica fac maxim
-intre lungimea curenta si lungimea + frecventa literei dominante.
-Apoi verific daca numarul de aparitii al literei este mai mare decat jumatate
-din lungimea parolei.
-Complexitatea este O(26*10000*N) pentru ca parcurg pentru fiecare litera toate
-cuvintele si mai parcurg si lungimile.
+Problem 4 ----Encrypted----
+To solve this problem I will use something similar to the problem
+of the backpack when I have to find the maximum length of the password, browsing
+decreasing in order not to count a preceding word several times.
+I will read all the words in a words vector, I will do the frequency
+for each letter in each word and I will store them in a map
+N times for each word.
+Then I go through every possible letter and get all the password combinations
+of maximum length for the respective letter, doing so as follows:
+I take a dp vector of the maximum length of the password 10001, it goes through all of them
+the words to the respective letter, the length and frequency of the letter in that one is taken
+word, the vector is traversed from the end so as not to add a longer length
+many times then I check if the maximum condition is met, that is, I do the maximum
+between the current length and the length + frequency of the dominant letter.
+Then I check if the number of occurrences of the letter is greater than half
+from the length of the password.
+The complexity is O(26*10000*N) because I go through all of them for each letter
+the words and the lengths go on.
 
-Problema 5 ----Oferta----
-Pentru rezolvarea acestei probleme am folosit notiunea de programare dinamica,
-utilizand un vector de costuri "cost" folosit pentru a stoca minimul necesar
-cumpararii celor n produse.
-Pot sa iau produsul singur,in format de 2 sau de 3.
-Unul singur adaug pretul produsului la costul total calculat.
-Doua produse,verific daca prin cumpararea in comun a celor 2 
-si cu reducere e mai ieftina daca as cumpara separat,sau daca
-cumpar 3 produse(2 cele mai scumpe si al 3 lea ieftin ) voi calcula
-cele mai scumpe 2 din 3 si voi compara.
-Deci costul va fi minimul pe care il calculez in ficare structura de decizie.
-Complexitatea algoritmului va fi O(n) deoarece voi parcurge toate elementele
-vectorului si voi faca doar verificari O(1) in interiorul parcurgerii.
+Problem 5 ----Offer----
+To solve this problem we used the notion of dynamic programming,
+using a cost vector "cost" used to store the minimum required
+the purchase of those in the products.
+I can take the product alone, in the format of 2 or 3.
+I alone add the price of the product to the calculated total cost.
+Two products, I check if by buying the 2 together 
+and with a discount it's cheaper if I buy separately, or if
+I buy 3 products (2 most expensive and the 3rd cheap) I will calculate
+the most expensive 2 out of 3 and I will compare.
+So the cost will be the minimum that I calculate in the decision structure.
+The complexity of the algorithm will be O(n) because I will loop through all the elements
+vector and I will only do O(1) checks inside the traversal.
 
